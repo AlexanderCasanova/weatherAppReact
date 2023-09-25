@@ -1,0 +1,147 @@
+/* Estilos generales */
+* {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+  
+#root{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#root {
+  /* Establece un fondo degradado con múltiples capas */
+  background: linear-gradient(
+    135deg,
+    #4d8af0,
+    #444
+  ), /* Capa 1 - Degradado azul a gris */
+  linear-gradient(
+    45deg,
+    #ff6b6b,
+    #f5f5f5
+  ); /* Capa 2 - Degradado rojo a gris */
+
+  /* Establece el tamaño y la repetición del fondo */
+  background-size: 100% 100%, 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.container{
+  padding: 20px 40px;
+}
+
+.titleApp{
+  padding: 10px 20px;
+  font-size: 28px; /* Tamaño de fuente */
+  color: #fff; /* Color de texto gris oscuro */
+  margin-bottom: 20px; /* Espaciado inferior */
+  text-align: center; /* Alineación al centro del texto */
+}
+.formApp{
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+}
+.formApp button{
+  width: 95px;
+  background-color: #555; /* Color de fondo más oscuro */
+  color: #fff; /* Color del texto blanco */
+  font-size: 16px; /* Tamaño de fuente */
+  padding: 10px 20px; /* Espaciado interno del botón */
+  border-radius: 3px;
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+  transition: background-color 0.3s ease;
+}
+
+.formApp button:hover {
+  background-color: #333; /* Color de fondo azul más oscuro al pasar por encima */
+
+}
+
+.formApp input{
+  width: 220px;
+  background-color: #fff; /* Color de fondo blanco */
+  color: #444; /* Color de texto gris oscuro */
+  border: 1px solid #ccc; /* Borde delgago gris claro */
+  padding: 10px; /* Espaciado interno */
+  font-size: 16px; /* Tamaño de fuente */
+  border-radius: 3px; /* Redondea las esquinas */
+  margin-bottom: 10px; /* Espaciado inferior */
+  margin-right: 5px;
+}
+
+.formApp input:focus {
+  outline: none; /* Quita el contorno al enfocar */
+  border-color: #555;
+}
+
+.formApp input:hover {
+  border-color: #333;
+}
+
+
+.weatherComponentContainer{
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.loadingData{
+  display: block;
+  text-align: center;
+  font-size: 24px;
+  color: #fff;
+  height: 270px;
+}
+
+.errorData{
+  display: block;
+  text-align: center;
+  font-size: 24px;
+  color: #fff;
+  height: 270px;
+}
+
+
+/* Estilo para el componente de weather */
+.weatherComponent {
+  background-color: #333; /* Color de fondo gris oscuro */
+  padding: 20px; /* Espaciado interno */
+  border-radius: 10px; /* Redondea las esquinas */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  text-align: center; /* Centra el contenido */
+  max-width: 300px; /* Ancho máximo */
+  min-width: 230px;
+  margin: 0 auto; /* Centra horizontalmente */
+}
+
+/* Estilo para el nombre */
+.weatherComponent__name {
+  color: #fff; /* Color de texto blanco */
+  font-size: 24px; /* Tamaño de fuente grande para el nombre */
+  margin-bottom: 10px; /* Espaciado inferior */
+}
+
+/* Estilo para los datos (temperatura, humedad, condición) */
+.weatherComponent__data {
+  color: #fff; /* Color de texto blanco */
+  font-size: 16px; /* Tamaño de fuente */
+  margin-bottom: 8px; /* Espaciado inferior */
+}
+
+/* Estilo para la imagen del icono climático */
+.weatherComponent__img {
+  max-width: 100px; /* Ancho máximo de la imagen */
+  height: auto; /* Altura automática para mantener la relación de aspecto */
+  margin-top: 10px; /* Espaciado superior */
+}
